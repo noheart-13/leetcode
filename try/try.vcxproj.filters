@@ -13,6 +13,9 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="源文件\leetcode%28C++%29">
+      <UniqueIdentifier>{3a8ab6e3-c484-4bc4-894c-dda7e29ead63}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="try.cpp">
@@ -31,7 +34,10 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="2 sum .cpp">
-      <Filter>源文件</Filter>
+      <Filter>源文件\leetcode%28C++%29</Filter>
+    </ClCompile>
+    <ClCompile Include="3 sum.cpp">
+      <Filter>源文件\leetcode%28C++%29</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
