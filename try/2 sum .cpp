@@ -7,7 +7,14 @@ public:
         int left = 0;
         int right = numbers.size() - 1;
         while (true){
-
+		int	s = numbers[left] + numbers[right];
+            if (s == target){
+                return { left + 1, right + 1 };
+            } else if (s < target){
+                left++;
+            } else {
+                right--;
+			}
         }
     }
 };
