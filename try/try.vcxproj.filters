@@ -39,5 +39,8 @@
     <ClCompile Include="3 sum.cpp">
       <Filter>源文件\leetcode%28C++%29</Filter>
     </ClCompile>
+    <ClCompile Include="计数对中和小于目标值的技术.cpp">
+      <Filter>源文件\leetcode%28C++%29</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
