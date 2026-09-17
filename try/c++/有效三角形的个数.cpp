@@ -1,22 +1,18 @@
-#include <vector>
-#include <algorithm>
-using namespace std;
-
 class Solution {
 public:
     int triangleNumber(vector<int>& nums) {
         ranges::sort(nums);
         int n = nums.size();
         int m = 0;
-        for (int i = n - 1; i > 2; i--) {
+        for (int i = n - 1; i > 1; i--) {
             int j = i - 1, k = 0;
             while (k < j) {
-                if (nums[k] + nums[j] > nums[j]) {
+                if (nums[k] + nums[j] > nums[i]) {
                     m += j - k;
-                    k--;
+                    j--;
                 }
                 else {
-                    j++;
+                    k++;
                 }
             }
         }

@@ -140,6 +140,11 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="3 sum.cpp" />
+    <ClCompile Include="c++\2 sum .cpp" />
+    <ClCompile Include="c++\3 sum.cpp" />
+    <ClCompile Include="c++\4 sum.cpp" />
+    <ClCompile Include="c++\最接近的三数之和.cpp" />
+    <ClCompile Include="c++\计数对中和小于目标值的技术.cpp" />
     <ClCompile Include="try.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>

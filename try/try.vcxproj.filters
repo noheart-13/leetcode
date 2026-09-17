@@ -42,5 +42,20 @@
     <ClCompile Include="计数对中和小于目标值的技术.cpp">
       <Filter>源文件\leetcode%28C++%29</Filter>
     </ClCompile>
+    <ClCompile Include="c++\2 sum .cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="c++\3 sum.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="c++\4 sum.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="c++\计数对中和小于目标值的技术.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="c++\最接近的三数之和.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
