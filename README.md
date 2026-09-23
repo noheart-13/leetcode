@@ -1,4 +1,4 @@
-2 sum -leetcode 167： 相向双指针 从一个数和最后一个数计算加和，若数值大于target，则最后数值过大，指针前移，若小于target，则最前数值过小，指针后移，直至目标大于target（时间复杂度：O（n）；空间复杂度：O（1））
+**2 sum -leetcode 167**： 相向双指针 从一个数和最后一个数计算加和，若数值大于target，则最后数值过大，指针前移，若小于target，则最前数值过小，指针后移，直至目标大于target（时间复杂度：O（n）；空间复杂度：O（1））
 
 3 sum -leetcode 15 ： 双指针＋剪枝 先进行排序方便进行双指针和两数相同时去重，固定第一个数然后变成两数之和解决，去重则是遇到前一个数字和自己一样时，跳过当前数字。两个优化：1.固定的一个数和最后两个数相加大于0，则不存在三数之和等于0，break（剪枝算法）；2.固定的数和最后面两个最大的数相加时小于0，则内层枚举不存在三数和等于0，但是nums[i]可变大，所以后面任有机会三数和等于0，continue。
 
@@ -23,3 +23,5 @@
 如果 preMax[left]≤sufMax[right]，由于 sufMax[right]≤sufMax[left]（包含的数越多，最大值越大），所以 preMax[left]≤sufMax[right]≤sufMax[left]，所以 min(preMax[left],sufMax[left])=preMax[left]，left 处的接水量就是 preMax[left]−height[left]。
 
 如果 preMax[left]≥sufMax[right]，由于 preMax[left]≤preMax[right]（包含的数越多，最大值越大），所以 sufMax[right]≤preMax[left]≤preMax[right]，所以 min(preMax[right],sufMax[right])=sufMax[right]，right 处的接水量就是 sufMax[right]−height[right]。
+
+验证回文串 -leetcode 125：
