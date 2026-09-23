@@ -16,6 +16,8 @@
 盛最多水的容器 -leetcode 11 ：双指针，分别从两头开始，记录最大的盛水容量。若左边数组值小，向右移动；右边反之。同时利用max函数，取一开始容量和后续数组移动后容量两者的最大值，然后return
 
 接雨水 -leetcode 42 法一（前后缀分解）：定义两个数组，一个从前往后确立的最大高度，一个从后往前遍历最大高度。将两数组同一位置取最小值-该位置上的初始数组值，即为水含量。
+
                     法二（相向双指针）：基于法一的优化，仅进行一次遍历。
 如果 preMax[left]≤sufMax[right]，由于 sufMax[right]≤sufMax[left]（包含的数越多，最大值越大），所以 preMax[left]≤sufMax[right]≤sufMax[left]，所以 min(preMax[left],sufMax[left])=preMax[left]，left 处的接水量就是 preMax[left]−height[left]。
+
 如果 preMax[left]≥sufMax[right]，由于 preMax[left]≤preMax[right]（包含的数越多，最大值越大），所以 sufMax[right]≤preMax[left]≤preMax[right]，所以 min(preMax[right],sufMax[right])=sufMax[right]，right 处的接水量就是 sufMax[right]−height[right]。
