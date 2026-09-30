@@ -33,7 +33,11 @@
 
 ***给植物浇水2 -leetcode 2105*** ：相向双指针。
 1.初始化答案 ans=0，Alice 水罐的初始水量 a=capacityA，Bob 水罐的初始水量 b=capacityB。
+
 2.初始化左右指针 i=0, j=n−1。
+
 3.循环直到 i≥j。每次循环，对于 Alice，如果 a<plants[i]，那么 Alice 需要重新灌满水罐，a 重置为 capacityA，答案加一。然后把 a 减少 plants[i]，左指针 i 加一。对于 Bob，如果 b<plants[j]，那么 Bob 需要重新灌满水罐，b 重置为 capacityB，答案加一。然后把 b 减少 plants[j]，右指针 j 减一。
+
 4.循环结束后，如果 i=j 且 max(a,b)<plants[i]，则需要重新灌满水罐，答案加一。
+
 5.返回答案。
