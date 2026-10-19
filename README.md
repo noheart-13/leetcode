@@ -77,3 +77,5 @@
 ***找到最长的半重复子字符串 -leetcode 2730*** : s[right] 进入窗口，检查 s[right] 是否等于 s[right−1]。如果相等，cnt 增加 1。如果 cnt>1，则不断右移左指针 left 直到 cnt=1。s[left] 离开窗口前，如果其等于 s[left+1]，则把 cnt 减少 1。统计子串长度 right−left+1 的最大值。
 
 ***最大连续 1 的个数 -leetcode 1004*** : 我的解法，从右边开始统计0的数量，当0的数量大于k时，左窗口开始移动。如果左窗口已经等于0了，k++。每次在外层的右端点右移的循环时更新ans的值。官方解法，定义一个cnt0，用1-nums[right]加上，当cnt0大于k时，减去1-nums[left]，同时left++。更新ans值。
+
+***统计最大元素出现至少 K 次的子数组 -leetcode 2962*** ： 先取数组里的最大值maxNum，然后窗口右端开始如果nums[right]==maxNum，则count++。当count>=初始给定的次数，进入内循环。内循环left左端点开始遍历。当nums[left]==maxNum，count--；同时left++右移，直至不符合内循环条件。[left,right] 这个子数组是不满足题目要求的，但在退出循环之前的最后一轮循环，[left−1,right] 是满足题目要求的。由于子数组越长，越能满足题目要求，所以除了 [left−1,right]，还有 [left−2,right],[left−3,right],…,[0,right] 都是满足要求的。也就是说，当右端点固定在 right 时，左端点在 0,1,2,…,left−1 的所有子数组都是满足要求的，这一共有 left 个，加到答案中。
