@@ -79,3 +79,5 @@
 ***最大连续 1 的个数 -leetcode 1004*** : 我的解法，从右边开始统计0的数量，当0的数量大于k时，左窗口开始移动。如果左窗口已经等于0了，k++。每次在外层的右端点右移的循环时更新ans的值。官方解法，定义一个cnt0，用1-nums[right]加上，当cnt0大于k时，减去1-nums[left]，同时left++。更新ans值。
 
 ***统计最大元素出现至少 K 次的子数组 -leetcode 2962*** ： 先取数组里的最大值maxNum，然后窗口右端开始如果nums[right]==maxNum，则count++。当count>=初始给定的次数，进入内循环。内循环left左端点开始遍历。当nums[left]==maxNum，count--；同时left++右移，直至不符合内循环条件。[left,right] 这个子数组是不满足题目要求的，但在退出循环之前的最后一轮循环，[left−1,right] 是满足题目要求的。由于子数组越长，越能满足题目要求，所以除了 [left−1,right]，还有 [left−2,right],[left−3,right],…,[0,right] 都是满足要求的。也就是说，当右端点固定在 right 时，左端点在 0,1,2,…,left−1 的所有子数组都是满足要求的，这一共有 left 个，加到答案中。
+
+***统计得分小于 K 的子数组数目 -leetcode 2302*** ： 枚举子数组的右端点 right，同时维护窗口内的元素和 sum 以及窗口左端点 left。窗口的分数为 sum⋅(right−left+1)。元素 x=nums[right] 进入窗口，把 sum 增加 x。如果窗口的分数 ≥k，那么把左端点元素 nums[left] 移出窗口，同时减少 sum，把 left 加一。内层循环结束后，[left,right] 这个子数组是合法的。根据上面的使用前提 2，在这个子数组内部的子数组也是合法的，其中右端点小于 right 的子数组，我们在之前的循环中已经统计过了，这里只需要统计右端点恰好等于 right 的合法子数组，即[left,right],[left+1,right],…,[right,right]。这一共有 right−left+1 个，加入答案。
