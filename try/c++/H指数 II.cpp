@@ -1,3 +1,4 @@
+//时间复杂发度 O(nlogn)
 class Solution {
 public:
     int hIndex(vector<int>& citations) {
@@ -21,6 +22,28 @@ public:
             long long mid = left + (right - left) / 2;
             (check(mid) ? left : right) = mid;
         }
+        return left;
+    }
+};
+//时间复杂度 O(log n)
+class Solution {
+public:
+    int hIndex(vector<int>& citations) {
+        int n = static_cast<int>(citations.size());
+        int left = 0;
+        int right = n + 1;
+
+        while (left + 1 < right) {
+            int mid = left + (right - left) / 2;
+
+            if (citations[n - mid] >= mid) {
+                left = mid;
+            }
+            else {
+                right = mid;
+            }
+        }
+
         return left;
     }
 };
